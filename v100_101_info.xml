@@ -1,0 +1,41 @@
+<!-- sg_socialbar 131029 symstroem GbR-TN, Lizensiert unter GPL: http://www.gnu.org/licenses/gpl-3.0.html -->
+<?xml version='1.0' encoding="ISO-8859-1"?>
+<jtlshop3plugin>
+    <Name>Socialbar</Name>
+    <Description>Plugin für Socialbar</Description>
+    <Author>tn</Author>
+    <URL>https://stromgraf.de</URL>
+    <XMLVersion>100</XMLVersion>
+    <ShopVersion>315</ShopVersion>
+    <PluginID>sg_socialbar</PluginID>
+    <Install>
+        <Version nr="100">
+            <CreateDate>2012-04-26</CreateDate>
+        </Version>
+        <Version nr="101">
+            <CreateDate>2013-10-10</CreateDate>
+        </Version>
+        <ExportFormat>
+            <Format>
+                <Name>Socialbar</Name>
+                <FileName>main_socials.txt</FileName>
+                <Header>test</Header>
+                <ContentFile>socials.php</ContentFile>
+                <Encoding>ASCII</Encoding>
+                <VarCombiOption>0</VarCombiOption>
+                <OnlyStockGreaterZero>N</OnlyStockGreaterZero>
+                <OnlyPriceGreaterZero>N</OnlyPriceGreaterZero>
+                <OnlyProductsWithDescription>N</OnlyProductsWithDescription>
+                <ShippingCostsDeliveryCountry>DE</ShippingCostsDeliveryCountry>
+                <EncodingQuote>N</EncodingQuote>
+                <EncodingDoubleQuote>N</EncodingDoubleQuote>
+                <EncodingSemicolon>N</EncodingSemicolon>
+            </Format>
+        </ExportFormat>
+	<Hooks>
+            <Hook id="99">99_socials.php</Hook>
+            <Hook id="134">134_wawi_socials.php</Hook>
+            <Hook id="140">140_display_socials.php</Hook>			
+	</Hooks>		
+    </Install>
+</jtlshop3plugin>

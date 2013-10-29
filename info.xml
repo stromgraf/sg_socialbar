@@ -1,0 +1,36 @@
+<!-- sg_socialbar 131029 symstroem GbR-TN, Lizensiert unter GPL: http://www.gnu.org/licenses/gpl-3.0.html -->
+<?xml version='1.0' encoding="ISO-8859-1"?>
+<jtlshop3plugin>
+    <Name>Socialbar</Name>
+    <Description>Plugin für Socialbar</Description>
+    <Author>tn</Author>
+    <URL>https://stromgraf.de</URL>
+    <XMLVersion>100</XMLVersion>
+    <ShopVersion>315</ShopVersion>
+    <PluginID>sg_socialbar</PluginID>
+    <Install>
+        <Version nr="100">
+            <CreateDate>2012-04-26</CreateDate>
+        </Version>
+        <Version nr="101">
+            <CreateDate>2013-10-10</CreateDate>
+        </Version>
+        <Version nr="102">
+            <CreateDate>2013-10-23</CreateDate>
+        </Version>        
+	<Hooks>
+            <Hook id="99">99_socials.php</Hook>
+            <Hook id="140">140_display_socials.php</Hook>			
+	</Hooks>
+        <Adminmenu>
+            <Settingslink sort="1">
+                <Name>Einstellungen</Name>
+                <Setting type="text" initialValue="XXX" sort="1" conf="Y">  
+                    <Name>Twitter ScreenName</Name>
+                    <Description>ScreenName von Twitter eintragen, um Follower in Socialbar anzuzeigen.</Description>
+                   <ValueName>screenName</ValueName>
+                </Setting>
+            </Settingslink>
+        </Adminmenu>		
+    </Install>
+</jtlshop3plugin>
