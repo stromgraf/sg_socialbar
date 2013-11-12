@@ -14,6 +14,7 @@ if (isset($_GET['url'])){
     libxml_use_internal_errors(true);
 	$gDoc->loadHTML($gHtml);
 	libxml_clear_errors();
+	libxml_use_internal_errors(false);
     $gCounter = $gDoc->getElementById('aggregateCount');    
     
     $fbString = file_get_contents('http://graph.facebook.com/?ids=' . urlencode($_GET['url']));
