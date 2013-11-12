@@ -11,7 +11,9 @@ if (isset($_GET['url'])){
     
     $gHtml =  file_get_contents( 'https://plusone.google.com/_/+1/fastbutton?url=' . urlencode($_GET['url']));
     $gDoc = new DOMDocument();
-    $gDoc->loadHTML($gHtml);
+    libxml_use_internal_errors(true);
+	$gDoc->loadHTML($gHtml);
+	libxml_clear_errors();
     $gCounter = $gDoc->getElementById('aggregateCount');    
     
     $fbString = file_get_contents('http://graph.facebook.com/?ids=' . urlencode($_GET['url']));
